@@ -1,26 +1,94 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8">
+<head>
 	<title>个人简介</title>
+	<link rel="stylesheet" type="text/css" href="resume.css">
+	<script src="https://kit.fontawesome.com/4ea7bec77b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<h1>你的名字</h1>
-	<p>你的职业/专业</p>
-	<h2>教育背景</h2>
-	<ul>
-		<li>学位/证书 - 学校名称，毕业时间</li>
-		<li>学位/证书 - 学校名称，毕业时间</li>
-	</ul>
-	<h2>工作经历</h2>
-	<ul>
-		<li>公司名称 - 职位，工作时间</li>
-		<li>公司名称 - 职位，工作时间</li>
-	</ul>
-	<h2>技能</h2>
-	<ul>
-		<li>技能1</li>
-		<li>技能2</li>
-		<li>技能3</li>
-	</ul>
+	<div class="container">
+		<header>
+			<h1>Hector's Resume</h1>
+			<div class="info">
+				<p><span>姓名：</span>孙文</p>
+				<p><span>年龄：</span>25岁</p>
+				<p><span>职业：</span>软件工程师</p>
+			</div>
+
+			<ul class="contact-info">
+				<li><i class="fa fa-phone"></i> 123-456-7890</li>
+				<li><i class="fa fa-envelope"></i> hector@example.com</li>
+				<li><i class="fa fa-map-marker"></i> 北京市中关村科技园</li>
+			</ul>
+		</header>
+
+		<main>
+			<section class="summary">
+				<h2>求职信息</h2>
+				<ul>
+					<li>目标职位: 产品经理</li>
+				</ul>
+			</section>
+
+			<section class="education">
+				<h2>教育背景</h2>
+				<ul>
+					<li>北京大学 - 信息管理与信息系统 - 学士学位 - 2010-2014</li>
+				</ul>
+			</section>
+
+			<section class="experience">
+				<h2>工作经验</h2>
+
+				<article class="job">
+					<h3>腾讯 - 高级产品经理</h3>
+					<ul>
+						<li>领导并管理产品团队，确保产品质量和进度</li>
+						<li>调研并分析市场趋势，建立了有效的产品策略</li>
+						<li>时间：2018-至今</li>
+					</ul>
+				</article>
+
+				<article class="job">
+					<h3>百度 - 产品经理</h3>
+					<ul>
+						<li>负责产品的需求收集，需求分析和产品设计</li>
+						<li>推动产品的开发，测试，上线和优化</li>
+						<li>有效地与跨职能团队合作，推动产品快速迭代</li>
+						<li>时间：2015-2017</li>
+					</ul>
+				</article>
+			</section>
+
+			<section class="skills">
+				<h2>技能清单</h2>
+				<table class="skill-table">
+					<thead>
+						<tr>
+							<th>技能</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>需求收集与分析</td>
+						</tr>
+						<tr>
+							<td>产品设计和开发</td>
+						</tr>
+						<tr>
+							<td>项目管理</td>
+						</tr>
+						<tr>
+							<td>市场与竞品分析</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			
+
+		</main>
+
+	</div>
+
 </body>
 </html>
