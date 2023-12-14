@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8">
-	<title>个人简介</title>
-	<link rel="stylesheet" type="text/css" href="css/flexbox.css">
-	<script src="https://kit.fontawesome.com/4ea7bec77b.js" crossorigin="anonymous"></script>
-    
 
-
+<head>
+    <meta charset="utf-8" />
+    <title>个人简介</title>
+    <link rel="stylesheet" type="text/css" href="css/flexbox.css" />
+    <script src="https://kit.fontawesome.com/4ea7bec77b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -70,7 +70,9 @@
                 <table class="skill-table">
                     <thead>
                         <tr>
-                            <th><h3>技能</h3></th>
+                            <th>
+                                <h3>技能</h3>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -89,30 +91,36 @@
                     </tbody>
                 </table>
             </section>
-        <footer>
-            <h2>AIGC作品</h2>
-            <section class="gallery">
-                <div class="gallery-item">
-                    <button class="toggle-button">展示图片</button>
-                    <div class="more-content">
-                        <h3>Surprise!!!</h3>
-                        <img src="images\AyjDw.png" alt="Image 1">
-                        <!-- 这里放置更多内容 -->
+            <footer>
+                <h2>AIGC作品</h2>
+                <section class="gallery">
+                    <div class="gallery-item">
+                        <h3>世外桃源!!!</h3>
+                        <button id = "button1" class="toggle-button">展示图片</button>
+                        <div class="more-content">
+                            <img src="images\AyjDw.png" alt="Image 1" />
+                            <!-- 这里放置更多内容 -->
+                        </div>
                     </div>
-                  </div>
-                  <div class="gallery-item">
-                    <img src="images\iRVYa.png" alt="Image 2">
-                  </div>
-                  <div class="gallery-item">
-                    <img src="images\WECyf.png" alt="Image 3">
-                  </div>
-
-            </section>
-        </footer>
+                    <div class="gallery-item">
+                        <h3>认真工作!!!</h3>
+                        <button id = "button2" class="toggle-button">展示图片</button>
+                        <div class="more-content">
+                            <img src="images\iRVYa.png" alt="Image 2" />
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <h3>办公空间!!!</h3>
+                        <button id = "button3" class="toggle-button">展示图片</button>
+                        <div class="more-content">
+                            <img src="images\WECyf.png" alt="Image 3" />
+                        </div>
+                    </div>
+                </section>
+            </footer>
         </main>
-
     </div>
     <script src="js/action.js"></script>
 </body>
-</html>
 
+</html>

@@ -3,16 +3,24 @@ window.addEventListener('load', function() {
 });
 
 
-const toggleButton = document.querySelector('.toggle-button');
-const moreContent = document.querySelector('.more-content');
+const toggleButtons = document.querySelectorAll('.toggle-button');
 
-toggleButton.addEventListener('click', function() {
-  moreContent.classList.toggle('show-more');
-  if (moreContent.classList.contains('show-more')) {
-    toggleButton.textContent = '隐藏';
-    moreContent.style.display = 'block';
-  } else {
-    toggleButton.textContent = '展示图片';
-    moreContent.style.display = 'none';
-  }
+
+
+toggleButtons.forEach(function(toggleButton) {
+  toggleButton.addEventListener('click', function() {
+    const moreContent = this.parentElement.querySelector('.more-content');
+    moreContent.classList.toggle('show-more');
+
+    if (moreContent.classList.contains('show-more')) {
+      toggleButton.textContent = '隐藏';
+      moreContent.style.display = 'block';
+    } else {
+      toggleButton.textContent = '展示图片';
+      moreContent.style.display = 'none';
+    }
+  });
+  
 });
+
+
