@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 添加待办事项的输入框和按钮 -->
+      <label for="new-todo-input">添加待办： </label
+      ><input type="text" id="new-todo-input" />
+      <button id="add-todo-button">添加</button>
+
+      <!-- 待办事项列表 -->
+      <ul class="todo-list"></ul>
+    </div>
+
+    <script>
+      // 在页面加载完成后执行以下代码
+      document.addEventListener("DOMContentLoaded", function () {
+        var todoList = document.querySelector(".todo-list");
+        var addTodoButton = document.getElementById("add-todo-button");
+
+        // 添加待办事项的函数
+        function addTodo() {
+          var newTodoInput = document.getElementById("new-todo-input");
+          var todoText = newTodoInput.value;
+
+          if (todoText.trim() === "") {
+            alert("请输入待办事项");
+            return;
+          }
+
+          // 创建新的待办事项元素
+          var todoItem = document.createElement("li");
+          var checkbox = document.createElement("input");
+          checkbox.type = 'checkbox'
+          var todoSpan = document.createElement("span");
+          var deleteButton = document.createElement("button");
+
+          todoSpan.textContent = todoText;
+          deleteButton.textContent = "删除";
+
+          todoItem.appendChild(checkbox);
+          todoItem.appendChild(todoSpan);
+          todoItem.appendChild(deleteButton);
+
+          todoList.appendChild(todoItem);
+
+          // 为新添加的待办事项添加点击事件监听器
+          todoItem.addEventListener("click", function (event) {
+            if (event.target.type === 'checkbox') {
+              event.target.parentNode.classList.toggle("completed");
+            }
+          });
+
+          // 为新添加的待办事项的删除按钮添加事件监听器
+          deleteButton.addEventListener("click", function () {
+            this.parentNode.remove();
+          });
+
+          // 清空输入框
+          newTodoInput.value = "";
+        }
+
+        // 为添加按钮添加点击事件监听器
+        addTodoButton.addEventListener("click", addTodo);
+      });
+    </script>
+
+    <style>
+      .completed {
+        text-decoration: line-through;
+        color: gray;
+      }
+      .todo-list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .todo-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .todo-item input[type="checkbox"] {
+        margin-right: 10px;
+      }
+    </style>
+  </body>
+</html>
