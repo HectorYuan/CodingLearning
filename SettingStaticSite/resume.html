@@ -1,94 +1,111 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>个人简介</title>
-	<link rel="stylesheet" type="text/css" href="resume.css">
-	<script src="https://kit.fontawesome.com/4ea7bec77b.js" crossorigin="anonymous"></script>
-</head>
-<body>
-	<div class="container">
-		<header>
-			<h1>Hector's Resume</h1>
-			<div class="info">
-				<p><span>姓名：</span>孙文</p>
-				<p><span>年龄：</span>25岁</p>
-				<p><span>职业：</span>软件工程师</p>
-			</div>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人简介</title>
+    <link rel="stylesheet" type="text/css" href="css/resume.css" />
+    <style>
+      #fixedFrame {
+        position: fixed;
+        top: 0px; /* 从顶部固定位置 */
+        left: 0px; /* 从左侧固定位置 */
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/4ea7bec77b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-			<ul class="contact-info">
-				<li><i class="fa fa-phone"></i> 123-456-7890</li>
-				<li><i class="fa fa-envelope"></i> hector@example.com</li>
-				<li><i class="fa fa-map-marker"></i> 北京市中关村科技园</li>
-			</ul>
-		</header>
+  <body>
+    <div class="container">
+      <iframe
+        id="fixedFrame"
+        title="导航栏"
+        src="navbar.html"
+        width="100%"
+        height="100%"
+        frameborder="0"
+      ></iframe>
+      <header>
+        <h1>Hector's Resume</h1>
+        <div class="info">
+          <p><span>姓名：</span>孙文</p>
+          <p><span>年龄：</span>25岁</p>
+          <p><span>职业：</span>软件工程师</p>
+        </div>
 
-		<main>
-			<section class="summary">
-				<h2>求职信息</h2>
-				<ul>
-					<li>目标职位: 产品经理</li>
-				</ul>
-			</section>
+        <ul class="contact-info">
+          <li><i class="fa fa-phone"></i> 123-456-7890</li>
+          <li><i class="fa fa-envelope"></i> hector@example.com</li>
+          <li><i class="fa fa-map-marker"></i> 北京市中关村科技园</li>
+        </ul>
+      </header>
 
-			<section class="education">
-				<h2>教育背景</h2>
-				<ul>
-					<li>北京大学 - 信息管理与信息系统 - 学士学位 - 2010-2014</li>
-				</ul>
-			</section>
+      <main>
+        <section class="summary">
+          <h2>求职信息</h2>
+          <ul>
+            <li>目标职位: 产品经理</li>
+          </ul>
+        </section>
 
-			<section class="experience">
-				<h2>工作经验</h2>
+        <section class="education">
+          <h2>教育背景</h2>
+          <ul>
+            <li>北京大学 - 信息管理与信息系统 - 学士学位 - 2010-2014</li>
+          </ul>
+        </section>
 
-				<article class="job">
-					<h3>腾讯 - 高级产品经理</h3>
-					<ul>
-						<li>领导并管理产品团队，确保产品质量和进度</li>
-						<li>调研并分析市场趋势，建立了有效的产品策略</li>
-						<li>时间：2018-至今</li>
-					</ul>
-				</article>
+        <section class="experience">
+          <h2>工作经验</h2>
 
-				<article class="job">
-					<h3>百度 - 产品经理</h3>
-					<ul>
-						<li>负责产品的需求收集，需求分析和产品设计</li>
-						<li>推动产品的开发，测试，上线和优化</li>
-						<li>有效地与跨职能团队合作，推动产品快速迭代</li>
-						<li>时间：2015-2017</li>
-					</ul>
-				</article>
-			</section>
+          <article class="job">
+            <h3>腾讯 - 高级产品经理</h3>
+            <ul>
+              <li>领导并管理产品团队，确保产品质量和进度</li>
+              <li>调研并分析市场趋势，建立了有效的产品策略</li>
+              <li>时间：2018-至今</li>
+            </ul>
+          </article>
 
-			<section class="skills">
-				<h2>技能清单</h2>
-				<table class="skill-table">
-					<thead>
-						<tr>
-							<th>技能</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>需求收集与分析</td>
-						</tr>
-						<tr>
-							<td>产品设计和开发</td>
-						</tr>
-						<tr>
-							<td>项目管理</td>
-						</tr>
-						<tr>
-							<td>市场与竞品分析</td>
-						</tr>
-					</tbody>
-				</table>
-			</section>
-			
+          <article class="job">
+            <h3>百度 - 产品经理</h3>
+            <ul>
+              <li>负责产品的需求收集，需求分析和产品设计</li>
+              <li>推动产品的开发，测试，上线和优化</li>
+              <li>有效地与跨职能团队合作，推动产品快速迭代</li>
+              <li>时间：2015-2017</li>
+            </ul>
+          </article>
+        </section>
 
-		</main>
-
-	</div>
-
-</body>
+        <section class="skills">
+          <h2>技能清单</h2>
+          <table class="skill-table">
+            <thead>
+              <tr>
+                <th>技能</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>需求收集与分析</td>
+              </tr>
+              <tr>
+                <td>产品设计和开发</td>
+              </tr>
+              <tr>
+                <td>项目管理</td>
+              </tr>
+              <tr>
+                <td>市场与竞品分析</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

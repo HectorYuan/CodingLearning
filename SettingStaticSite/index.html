@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>网站标题</title>
-  <link rel="stylesheet" href="css\medium.css">
-</head>
-<body>
-  <header>
-    <!-- 网站头部内容 -->
-  </header>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hector 个人站点</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <iframe
+      id="fixedFrame"
+      title="导航栏"
+      src="navbar.html"
+      width="100%"
+      height="100%"
+      frameborder="0"
+    ></iframe>
+    <header>
+      <h1>网站标题</h1>
+    </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">首页</a></li>
-      <li><a href="profile.html">个人简介</a></li>
-      <li><a href="experience.html">个人经历</a></li>
-      <li><a href="portfolio.html">作品集</a></li>
-    </ul>
-  </nav>
-  
+    <main class="container">
+      <!-- 主要内容区域 -->
 
-  <main>
-    <!-- 主要内容区域 -->
-  </main>
+      <div class="notification">这是一个提示通知</div>
 
-  <footer>
-    <!-- 网站页脚内容 -->
-  </footer>
+      <h2>欢迎来到我的个人网站</h2>
+      <p>在这里，你可以找到我的个人简介、工作经历、待办清单和读书计划。</p>
+    </main>
 
-  <script src="script.js"></script>
-</body>
+    <footer>©2023 版权所有</footer>
+
+    <script>
+      // 获取提示通知元素
+      var notification = document.querySelector(".notification");
+
+      // 显示提示通知并设置定时器在3秒后隐藏
+      function showNotification() {
+        notification.classList.add("show");
+        setTimeout(function () {
+          notification.classList.remove("show");
+        }, 3000); // 3秒后隐藏
+      }
+
+      // 在需要显示提示通知的地方调用该函数
+      showNotification();
+    </script>
+  </body>
 </html>

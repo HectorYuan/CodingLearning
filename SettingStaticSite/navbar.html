@@ -1,0 +1,77 @@
+<!-- navbar.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>导航栏</title>
+    <style>
+      .navibar {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #add8e6; /* 浅蓝色背景 */
+        display: flex; /* 使用flexbox布局 */
+        justify-content: center; /* 元素间隔均匀分布 */
+        position: fixed;
+        width: 100%; /* 宽度为100% */
+        height: 64px;
+        top: 0; /* 顶部对齐 */
+        left: 0; /* 左边对齐 */
+      }
+
+      .navibar li {
+        padding: 20px; /* 填充，增加点击区域大小 */
+      }
+
+      .navibar a {
+        text-decoration: none; /* 去除下划线 */
+        color: grey; /* 默认灰色文字 */
+        font-weight: bold;
+        transition: color 0.3s; /* 过渡效果使颜色变化更平滑 */
+      }
+
+      .navibar a:hover,
+      .navibar a:active,
+      .navibar a:focus {
+        /* 鼠标悬停、点击、聚焦时的样式 */
+        color: blue; /* 点击后的蓝色文字 */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="navibar">
+        <li><a href="index.html" target="_top">首页</a></li>
+        <li><a href="info.html" target="_top">个人简介</a></li>
+        <li><a href="resume.html" target="_top">工作简历旧版</a></li>
+        <li><a href="resumeflex.html" target="_top">工作简历新版</a></li>
+        <li><a href="todolist.html" target="_top">待办清单</a></li>
+        <li><a href="readingList.html" target="_top">阅读计划</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      // 获取导航栏元素
+      var navBar = document.querySelector(".navibar");
+
+      // 获取导航栏距离顶部的初始位置
+      var navBarOffset = navBar.offsetTop;
+
+      // 监听页面滚动事件
+      window.onscroll = function () {
+        // 获取页面滚动的距离
+        var scrollY = window.scrollY;
+
+        // 如果页面滚动超过导航栏的初始位置
+        if (scrollY > navBarOffset) {
+          // 将导航栏设置为固定定位
+          navBar.style.position = "fixed";
+          navBar.style.top = "0";
+        } else {
+          // 恢复导航栏的初始样式
+          navBar.style.position = "static";
+        }
+      };
+    </script>
+  </body>
+</html>
