@@ -1,16 +1,18 @@
 /* Global styles */
 .container {
-  background-color: lightgoldenrodyellow;
+  max-width: 900px;
+  margin: 0 auto;
+  
 }
 
 /* Title styles */
-
 
 h1, h2{
   font-weight: bold;
   line-height: 1.2;
   color: darkblue;
   background-color: rgb(223, 235, 240);
+  margin: auto;
 }
 
 
@@ -37,24 +39,28 @@ h3 {
 
 .info li, .contact-info li {
   display: inline-block;
-  margin-right: 20px;
   line-height: 1.5;
+  margin-right: 10px;
 
 }
 
 .info li i, .contact-info li i {
-  margin-right: 10px;
+  margin-right: 5px;
   font-size: 18px;
 }
 
 
 /* Main content styles */
 main {
-  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
   margin-bottom: 40px;
+  background-color: #fff;
+  padding: 30px;
 }
 
 section {
+  margin: 0 auto;
   margin-bottom: 20px;
   text-align: left;
 }

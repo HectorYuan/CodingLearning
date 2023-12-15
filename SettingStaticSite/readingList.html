@@ -4,39 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>阅读计划网站</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-      }
-      .highlight {
-        background-color: yellow;
-        padding: 5px;
-        border-radius: 5px;
-      }
-      /* 其他样式 */
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>阅读计划概述</h1>
-    <p>这里是关于阅读计划原因的概述...</p>
+    <div class="container">
+      <header>
+        <h1>阅读计划概述</h1>
+        <p>这里是关于阅读计划原因的概述...</p>
+      </header>
 
-    <h2>阅读清单</h2>
-    <ul>
-      <li>HTML: 《HTML & CSS 设计与构建网站》</li>
-      <li>CSS: 《CSS 权威指南》</li>
-      <!-- 其他书籍 -->
-    </ul>
+      <main>
+        <h2>阅读清单</h2>
+        <ul>
+          <li>HTML: 《HTML & CSS 设计与构建网站》</li>
+          <li>CSS: 《CSS 权威指南》</li>
+          <!-- 其他书籍 -->
+        </ul>
 
-    <h2>阅读计划</h2>
-    <ul id="reading-plan">
-      <!-- 阅读任务列表 -->
-    </ul>
-    <button onclick="addTask()">添加任务</button>
+        <h2>阅读计划</h2>
+        <ul id="reading-plan">
+          <!-- 阅读任务列表 -->
+        </ul>
+        <button onclick="addTask()">添加任务</button>
 
-    <h2>额外资源</h2>
-    <div class="highlight">
-      <p>MDN Web 文档</p>
-      <!-- 其他资源 -->
+        <label for="new-todo-input">添加待办： </label
+          ><input type="text" id="new-todo-input" />
+          <button id="add-todo-button">添加</button>
+
+
+        <h2>额外资源</h2>
+        <div class="highlight">
+          <p>MDN Web 文档</p>
+          <!-- 其他资源 -->
+        </div>
+      </main>
     </div>
 
     <script>

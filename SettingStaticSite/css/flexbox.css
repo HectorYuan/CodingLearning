@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-around;
+    margin: auto
+
 }
 
 .info-block {
@@ -12,6 +13,7 @@
     align-items: flex-start;
     padding: 10px 0px;
     list-style: none;
+    margin: 10px;
 }
 
 
@@ -26,7 +28,6 @@
         align-items: flex-start;
         
     }
-
 }
 
 .gallery {
@@ -46,19 +47,6 @@
     padding: 10px;
 }
 
-/*
-@media (max-width: 768px) {
-    .gallery-item {
-        flex-basis: calc(50% - 10px);
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-item {
-        flex-basis: 100%;
-    }
-}
-*/
 
 .more-content {
     display: none;

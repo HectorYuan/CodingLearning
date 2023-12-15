@@ -1,8 +1,14 @@
 /* style.css */
 
 /* Global styles */
-body {
+header,
+nav,
+main,
+footer {
+  text-align: center;
+}
 
+body {
   line-height: 1.5;
   font-size: 16px;
   margin: 0;
@@ -12,13 +18,11 @@ body {
   color: #333;
 }
 
-a {
-  color: #0077c0;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+.container {
+  max-width: 900px;
+  margin: 0 20px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #inline {
@@ -50,11 +54,24 @@ header {
   margin-left: 20px;
 }
 
-header,
-nav,
-main,
-footer {
+/* Main content styles */
+main {
+  max-width: 900px;
+  width: 100%;
+  min-height: 80vh; /* 使用视口高度来保证主要内容区域的高度 */
+  padding: 0px;
+  margin: 0 auto;
+}
+
+
+h1 {
+  color: #333;
   text-align: center;
+  padding: 20px;
+}
+
+p {
+  margin-bottom: 10px;
 }
 
 /* 导航栏样式 */
@@ -109,6 +126,15 @@ nav ul li {
   display: none;
 }
 
+a {
+  color: #0077c0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .show {
   /* 显示通知 */
   display: block;
@@ -124,49 +150,6 @@ nav ul li {
     opacity: 0;
     visibility: hidden;
   }
-}
-
-/* Main content styles */
-main {
-  max-width: 900px;
-  min-height: 80vh; /* 使用视口高度来保证主要内容区域的高度 */
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.main-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.main-subtitle {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.main-content {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-
-h1 {
-  color: #333;
-  text-align: center;
-  padding: 20px;
-}
-
-p {
-  margin-bottom: 10px;
-}
-
-.info {
-  margin-bottom: 20px;
-}
-
-.info span {
-  font-weight: bold;
 }
 
 
@@ -204,4 +187,40 @@ article {
 footer {
   background-color: #f2f2f2;
   font-size: 14px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
+  border: 1px solid gray;
+  padding: 30;
+  background-color: lightgray;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f4f4f4;
+}
+
+.todo-item span {
+  font-size: 16px;
+  font-weight: bold;
+  color: aquamarine;
+  
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
 }
