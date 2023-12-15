@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>个人简介</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>个人简介</h1>
-    
-    <div class="info">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>个人简介</h1>
+    </header>
+
+    <main class="container">
+      <!-- 主要内容区域 -->
+      <div class="notification">这是一个提示通知</div>
+      <h2>欢迎来到我的个人网站</h2>
+      <p>在这里，你可以找到我的个人简介、工作经历、待办清单和读书计划。</p>
+
+      <div class="info">
         <p><span>姓名：</span>Hector</p>
         <p><span>年龄：</span>30岁</p>
         <p><span>职业：</span>产品经理&软件工程师</p>
-    </div>
-    
-    <div class="info">
+      </div>
+      <div class="info">
         <p><span>联系方式：</span>1234567890</p>
         <p><span>邮箱：</span>hector@futureforce.work</p>
         <p><span>地址：</span>上海市</p>
-    </div>
-</body>
+      </div>
+    </main>
+
+    <footer>©2023 版权所有</footer>
+
+    <script>
+      // 获取提示通知元素
+      var notification = document.querySelector(".notification");
+
+      // 显示提示通知并设置定时器在3秒后隐藏
+      function showNotification() {
+        notification.classList.add("show");
+        setTimeout(function () {
+          notification.classList.remove("show");
+        }, 3000); // 3秒后隐藏
+      }
+
+      // 在需要显示提示通知的地方调用该函数
+      showNotification();
+    </script>
+  </body>
 </html>

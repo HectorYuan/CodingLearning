@@ -4,45 +4,42 @@
     <meta charset="UTF-8" />
     <title>Hector 个人站点</title>
     <link rel="stylesheet" href="css/style.css" />
+
   </head>
   <body>
+    <nav>
+      <ul class="navibar">
+        <li><a href="info.html" target="inlineframe">个人简介</a></li>
+        <li><a href="resume.html" target="inlineframe">工作简历旧版</a></li>
+        <li><a href="resumeflex.html" target="inlineframe">工作简历新版</a></li>
+        <li><a href="todolist.html" target="inlineframe">待办清单</a></li>
+        <li><a href="readingList.html" target="inlineframe">阅读计划</a></li>
+      </ul>
+    </nav>
     <iframe
-      id="fixedFrame"
-      title="导航栏"
-      src="navbar.html"
+      id = "inline"
+      title="内联框架"
+      name="inlineframe"
       width="100%"
-      height="100%"
       frameborder="0"
+      src="info.html"
     ></iframe>
-    <header>
-      <h1>网站标题</h1>
-    </header>
-
-    <main class="container">
-      <!-- 主要内容区域 -->
-
-      <div class="notification">这是一个提示通知</div>
-
-      <h2>欢迎来到我的个人网站</h2>
-      <p>在这里，你可以找到我的个人简介、工作经历、待办清单和读书计划。</p>
-    </main>
-
-    <footer>©2023 版权所有</footer>
-
     <script>
-      // 获取提示通知元素
-      var notification = document.querySelector(".notification");
-
-      // 显示提示通知并设置定时器在3秒后隐藏
-      function showNotification() {
-        notification.classList.add("show");
-        setTimeout(function () {
-          notification.classList.remove("show");
-        }, 3000); // 3秒后隐藏
+      // 获取 iframe 元素
+      var iframe = document.getElementById('inline');
+  
+      // 设置 iframe 高度为窗口高度
+      function setIframeHeight() {
+        var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        iframe.style.height = windowHeight + 'px';
       }
-
-      // 在需要显示提示通知的地方调用该函数
-      showNotification();
+  
+      // 当窗口大小改变时重新设置 iframe 高度
+      window.addEventListener('resize', setIframeHeight);
+  
+      // 初始化设置 iframe 高度
+      setIframeHeight();
     </script>
   </body>
+
 </html>

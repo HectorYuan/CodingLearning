@@ -4,37 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>个人简介</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/resume.css" />
-    <style>
-      #fixedFrame {
-        position: fixed;
-        top: 0px; /* 从顶部固定位置 */
-        left: 0px; /* 从左侧固定位置 */
-      }
-    </style>
+
     <script
-      src="https://kit.fontawesome.com/4ea7bec77b.js"
+      src="https://kit.fontawesome.com/4ea7bec77b.js" defer
       crossorigin="anonymous"
     ></script>
   </head>
 
   <body>
     <div class="container">
-      <iframe
-        id="fixedFrame"
-        title="导航栏"
-        src="navbar.html"
-        width="100%"
-        height="100%"
-        frameborder="0"
-      ></iframe>
+
       <header>
         <h1>Hector's Resume</h1>
-        <div class="info">
-          <p><span>姓名：</span>孙文</p>
-          <p><span>年龄：</span>25岁</p>
-          <p><span>职业：</span>软件工程师</p>
-        </div>
+        <ul class="info">
+          <li><i class="fa-solid fa-user-tie"></i><span>姓名：</span>孙文</li>
+          <li><i class="fa-solid fa-heart"></i><span>年龄：</span>25岁</li>
+          <li><i class="fa-solid fa-suitcase"></i><span>职业：</span>软件工程师</li>
+        </ul>
 
         <ul class="contact-info">
           <li><i class="fa fa-phone"></i> 123-456-7890</li>

@@ -1,109 +1,122 @@
 /* Global styles */
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-  }
-  
-  a {
-    color: #0077c0;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Header styles */
-  header {
-    margin-bottom: 40px;
-    margin-top: 64px;
-  }
-  
-  h1 {
-    font-size: 36px;
-    margin: 0;
-  }
-  
-  .contact-info {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .contact-info li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .contact-info i {
-    margin-right: 5px;
-  }
-  
-  /* Main content styles */
-  main {
-    margin-bottom: 40px;
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 24px;
-  }
-  
-  .job h3 {
-    font-size: 20px;
-  }
-  
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li::before {
-      content:"•";
-      color:#0077c0;
-      font-weight:bold;
-      display:inline-block;
-      width:1em;
-      margin-left:-1em;
-  }
-  
-  .skills ul li::before {
-      content:"";
-      color:#0077c0;
-      font-weight:bold;
-      display:inline-block;
-      width:1em;
-      margin-left:-1em;
-  }
-  
-  .skill-table {
-	border-collapse: collapse;
-	width: 100%;
+.container {
+  background-color: lightgoldenrodyellow;
+}
+
+/* Title styles */
+
+
+h1, h2{
+  font-weight: bold;
+  line-height: 1.2;
+  color: darkblue;
+  background-color: rgb(223, 235, 240);
+}
+
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: darkblue;
+}
+
+.info, .contact-info {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.info li, .contact-info li {
+  display: inline-block;
+  margin-right: 20px;
+  line-height: 1.5;
+
+}
+
+.info li i, .contact-info li i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+
+/* Main content styles */
+main {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+section {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.job {
+  margin-bottom: 20px;
+}
+
+.job h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+ul {
+  padding-left: 20px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  list-style-type: circle;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/*
+li::before {
+  content: "•";
+  color: #0077c0;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+*/
+
+.skills ul li::before {
+  content: "";
+  color: #0077c0;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.skill-table {
+  border-collapse: separate;
+  width: 100%;
 }
 
 .skill-table th,
 .skill-table td {
-	padding: 10px;
-	border: 1px solid #ddd;
-	text-align: left;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
 .skill-table th {
-	background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .skill-table tbody tr:nth-child(even) {
-	background-color: #f9f9f9;
+  background-color: rgb(223, 235, 240);
 }
